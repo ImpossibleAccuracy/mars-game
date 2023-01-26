@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MarsGame": {
+      "commandName": "Project",
+      "commandLineArgs": "map2.txt"
+    }
+  }
+}
