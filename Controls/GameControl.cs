@@ -50,7 +50,7 @@ namespace MarsGame.Controls
             }
 
             Player = new Player();
-            Player.MoveTo(startPos.X, startPos.Y);
+            Player.MoveTo(startPos.Position.X, startPos.Position.Y);
         }
 
         protected virtual void LoadHunter()

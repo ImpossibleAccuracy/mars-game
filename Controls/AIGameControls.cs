@@ -44,13 +44,13 @@ namespace MarsGame.Controls
 
         private Direction GetDirectionByNodes(Cell c1, Cell c2)
         {
-            if (c1.X == c2.X)
+            if (c1.Position.X == c2.Position.X)
             {
-                return (c1.Y > c2.Y ? Direction.Top : Direction.Down);
+                return (c1.Position.Y > c2.Position.Y ? Direction.Top : Direction.Down);
             }
             else
             {
-                return (c1.X > c2.X ? Direction.Left : Direction.Right);
+                return (c1.Position.X > c2.Position.X ? Direction.Left : Direction.Right);
             }
         }
     }

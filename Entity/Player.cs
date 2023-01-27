@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Drawing;
+using MarsGame.Model;
 
 namespace MarsGame.Entity
 {
@@ -7,9 +7,7 @@ namespace MarsGame.Entity
 
     public class Player
     {
-        public int X { get; protected set; }
-
-        public int Y { get; protected set; }
+        public Point Position { get; protected set; }
 
         public event OnMove OnMove;
 
@@ -17,14 +15,13 @@ namespace MarsGame.Entity
 
         public Player(Point position)
         {
-            X = position.X;
-            Y = position.Y;
+            Position = position;
         }
 
         public void MoveTo(int x, int y)
         {
-            X = x;
-            Y = y;
+            Position.X = x;
+            Position.Y = y;
         }
 
         public void Move(Direction direction)
@@ -32,16 +29,16 @@ namespace MarsGame.Entity
             switch (direction)
             {
                 case Direction.Top:
-                    Y -= 1;
+                    Position.Y -= 1;
                     break;
                 case Direction.Right:
-                    X += 1;
+                    Position.X += 1;
                     break;
                 case Direction.Down:
-                    Y += 1;
+                    Position.Y += 1;
                     break;
                 case Direction.Left:
-                    X -= 1;
+                    Position.X -= 1;
                     break;
             }
 

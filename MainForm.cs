@@ -50,7 +50,7 @@ namespace MarsGame
                 Width = _cellSize,
                 Height = _cellSize,
                 Image = _textures.GetPlayerTexture(),
-                Location = new Point(0, 0),
+                Location = new System.Drawing.Point(0, 0),
                 BorderStyle = BorderStyle.FixedSingle
             };
 
@@ -62,10 +62,10 @@ namespace MarsGame
 
         private void DrawPlayer()
         {
-            _playerTexture.Location = new Point()
+            _playerTexture.Location = new System.Drawing.Point()
             {
-                X = _player.X * _cellSize,
-                Y = _player.Y * _cellSize
+                X = _player.Position.X * _cellSize,
+                Y = _player.Position.Y * _cellSize
             };
         }
 
@@ -73,7 +73,7 @@ namespace MarsGame
         {
             container.Width = (int)((_map.Width + 0.55) * _cellSize);
             container.Height = (int)((_map.Height + 1.33) * _cellSize);
-            container.Location = new Point(
+            container.Location = new System.Drawing.Point(
                 Width / 2 - container.Width / 2,
                 Height / 2 - container.Height / 2);
 
@@ -96,10 +96,10 @@ namespace MarsGame
             {
                 Width = _cellSize,
                 Height = _cellSize,
-                Location = new Point
+                Location = new System.Drawing.Point
                 {
-                    X = cell.X * _cellSize,
-                    Y = cell.Y * _cellSize
+                    X = cell.Position.X * _cellSize,
+                    Y = cell.Position.Y * _cellSize
                 },
                 Image = _textures.GetTextureByBlockName(cell.Type),
                 BorderStyle = BorderStyle.FixedSingle

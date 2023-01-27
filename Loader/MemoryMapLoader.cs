@@ -32,8 +32,7 @@ namespace MarsGame.Loader
                     map[i, j] = new Cell()
                     {
                         Type = line[j],
-                        X = j,
-                        Y = i
+                        Position = new Point(j, i),
                     };
                 }
             }

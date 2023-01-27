@@ -26,11 +26,12 @@ namespace MarsGame.Loader
 
                 for (int j = 0; j < w; j++)
                 {
+                    char block = line[j];
+
                     arr[i, j] = new Cell()
                     {
-                        Type = line[j],
-                        X = j,
-                        Y = i,
+                        Type = block,
+                        Position = new Point(j, i),
                     };
                 }
             }

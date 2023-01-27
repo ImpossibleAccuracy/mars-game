@@ -28,9 +28,9 @@ namespace MarsGame.Controls
 
         public void OnPlayerMove(Direction direction)
         {
-            Console.WriteLine($"{++_stepNum}: Player move to ({Player.X}, {Player.Y})");
+            Console.WriteLine($"{++_stepNum}: Player move to ({Player.Position.X}, {Player.Position.Y})");
 
-            if (Map.Get(Player.X, Player.Y).IsQuit)
+            if (Map.Get(Player.Position.X, Player.Position.Y).IsQuit)
             {
                 Console.WriteLine("Quit");
                 Console.WriteLine("---------------------");
